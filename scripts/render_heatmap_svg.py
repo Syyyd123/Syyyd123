@@ -19,6 +19,10 @@ LEFT, TOP, PAD = 52, TITLE_H + 34, 22
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
 
+def days_label(n):
+    return f"{n} day" if n == 1 else f"{n} days"
+
+
 def build():
     static = bool(os.environ.get("STATIC"))
     data = json.loads((ROOT / "data/contributions.json").read_text())
@@ -48,14 +52,14 @@ def build():
     fy = TOP + 7 * STEP + 30
     total = f'{st["total"]:,}'
     parts.append(f'<text x="{LEFT}" y="{fy}" font-size="12.5" fill="{PAPER}"><tspan fill="{RUST_LIGHT}" font-weight="700">{total}</tspan>'
-                 f' contributions in the last year<tspan fill="{MUTED}">  ·  longest streak </tspan>{st["longest_streak"]} days'
-                 f'<tspan fill="{MUTED}">  ·  current streak </tspan>{st["current_streak"]} days</text>')
+                 f' contributions in the last year<tspan fill="{MUTED}">  ·  longest streak </tspan>{days_label(st["longest_streak"])}'
+                 f'<tspan fill="{MUTED}">  ·  current streak </tspan>{days_label(st["current_streak"])}</text>')
     lx = width - PAD - 5 * STEP - 70
     parts.append(f'<text x="{lx}" y="{fy}" font-size="11" fill="{MUTED}">Less</text>')
     for j, c in enumerate(PALETTE):
         parts.append(f'<rect x="{lx + 34 + j * STEP}" y="{fy - 11}" width="{CELL}" height="{CELL}" rx="3" fill="{c}" stroke="{BORDER}"/>')
     parts.append(f'<text x="{lx + 40 + 5 * STEP}" y="{fy}" font-size="11" fill="{MUTED}">More</text>')
-    parts.append(f'<text x="{LEFT}" y="{fy + 20}" font-size="10.5" fill="{MUTED}">updated {data["fetched"]} · includes private work</text>')
+    parts.append(f'<text x="{LEFT}" y="{fy + 20}" font-size="10.5" fill="{MUTED}">updated daily · includes private work · last run {data["fetched"]}</text>')
     style = """
   .c { transform-box: fill-box; transform-origin: center; opacity: 0; transform: scale(.3);
        animation: pop .35s cubic-bezier(.2,.8,.2,1) forwards; }
@@ -63,7 +67,7 @@ def build():
   @media (prefers-reduced-motion: reduce) { .c { animation: none; opacity: 1; transform: none; } }"""
     if static:
         style += "\n  .c { animation: none !important; opacity: 1; transform: none; }"
-    svg = window(width, height, "sid@sydney: ~ $ ./contributions.sh", "\n".join(parts), style)
+    svg = window(width, height, "Contributions · last 12 months", "\n".join(parts), style)
     out = ROOT / ("contrib-heatmap.static.svg" if static else "contrib-heatmap.svg")
     out.write_text(svg)
     print(f"{out.name}  {width}x{height}  {weeks} weeks, {st['total']} contributions")

@@ -33,11 +33,13 @@ def parse(html):
         m = re.match(r"\s*(\d[\d,]*) contribution", text)
         if cid in cells and m:
             cells[cid]["count"] = int(m.group(1).replace(",", ""))
-    return sorted(cells.values(), key=lambda c: c["date"])
+    official = re.search(r'id="js-contribution-activity-description"[^>]*>\s*([\d,]+)\s*contribution', html)
+    return sorted(cells.values(), key=lambda c: c["date"]), int(official.group(1).replace(",", "")) if official else None
 
 
-def stats(days):
-    total = sum(d["count"] for d in days)
+def stats(days, official=None):
+    # GitHub's headline number covers exactly one year; fall back to summing cells
+    total = official if official is not None else sum(d["count"] for d in days)
     longest = cur = run = 0
     for d in days:
         run = run + 1 if d["count"] else 0
@@ -54,10 +56,10 @@ def stats(days):
 
 
 def main():
-    days = parse(fetch())
+    days, official = parse(fetch())
     if not days:
         raise SystemExit("No calendar cells found; GitHub may have changed the markup.")
-    out = {"user": USER, "fetched": date.today().isoformat(), "days": days, "stats": stats(days)}
+    out = {"user": USER, "fetched": date.today().isoformat(), "days": days, "stats": stats(days, official)}
     (ROOT / "data").mkdir(exist_ok=True)
     (ROOT / "data/contributions.json").write_text(json.dumps(out, indent=1))
     s = out["stats"]

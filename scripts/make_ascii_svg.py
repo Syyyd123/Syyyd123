@@ -97,7 +97,7 @@ def build():
         style += "\n  .fg, .bg, .cursor { animation: none !important; } .fg { opacity: 1; } .bg { opacity: .38; }"
         cursor = ""
     body = "\n".join(bg_lines + fg_lines + [cursor])
-    svg = window(width, height, "sid@sydney: ~/portrait", body, style)
+    svg = window(width, height, "Sid Prithvi", body, style)
     out = ROOT / ("ascii-portrait.static.svg" if os.environ.get("STATIC") else "ascii-portrait.svg")
     out.write_text(svg)
     print(f"ascii-portrait.svg  {width}x{height}  {COLS}x{ROWS} chars")
