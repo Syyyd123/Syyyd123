@@ -9,20 +9,31 @@ permissions:
   contents: write
 
 jobs:
-  heatmap:
+  graphs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      # stdlib only: no pip install needed
+
+      # Flat heatmap (stdlib only)
       - run: python scripts/fetch_contributions.py
       - run: python scripts/render_heatmap_svg.py
+
+      # 3D graph in the site palette, then trimmed and framed
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: profile-3d/settings.json
+      - run: python scripts/trim_3d.py profile-3d-contrib/profile-3d-sid.svg profile-3d.svg
+      - run: rm -rf profile-3d-contrib
+
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json contrib-heatmap.svg
-          git diff --cached --quiet || git commit -m "chore: refresh contribution graph [skip ci]"
+          git add data/contributions.json contrib-heatmap.svg profile-3d.svg
+          git diff --cached --quiet || git commit -m "chore: refresh contribution graphs [skip ci]"
           git push
