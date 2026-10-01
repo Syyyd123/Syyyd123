@@ -16,10 +16,10 @@
   @media (prefers-reduced-motion: reduce) { .fg, .bg, .gl { animation: none; opacity: 1; } .bg { opacity: .38; } }
 </style>
 <rect x="0.5" y="0.5" width="552" height="531" rx="10" fill="#1A1310" stroke="#3A2C26"/>
-<path d="M0.5 30 H552.5" stroke="#3A2C26"/>
-<circle cx="18" cy="15" r="5" fill="#A63D28"/>
-<circle cx="35" cy="15" r="5" fill="#9AA685"/>
-<circle cx="52" cy="15" r="5" fill="#8A8378"/>
+<path d="M0.5 30.0 H552.5" stroke="#3A2C26"/>
+<circle cx="18.0" cy="15.0" r="5.0" fill="#A63D28"/>
+<circle cx="35.0" cy="15.0" r="5.0" fill="#9AA685"/>
+<circle cx="52.0" cy="15.0" r="5.0" fill="#8A8378"/>
 <text x="276.5" y="19.5" text-anchor="middle" font-size="11.5" fill="#8A8378">Sid Prithvi</text>
 <defs><linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="553" y2="293" gradientTransform="translate(-719 0)">
   <stop offset="0" stop-color="#F5F2EC"/><stop offset=".44" stop-color="#F5F2EC"/>

@@ -8,10 +8,10 @@
   @media (prefers-reduced-motion: reduce) { .c { animation: none; opacity: 1; transform: none; } }
 </style>
 <rect x="0.5" y="0.5" width="921" height="237" rx="10" fill="#1A1310" stroke="#3A2C26"/>
-<path d="M0.5 30 H921.5" stroke="#3A2C26"/>
-<circle cx="18" cy="15" r="5" fill="#A63D28"/>
-<circle cx="35" cy="15" r="5" fill="#9AA685"/>
-<circle cx="52" cy="15" r="5" fill="#8A8378"/>
+<path d="M0.5 30.0 H921.5" stroke="#3A2C26"/>
+<circle cx="18.0" cy="15.0" r="5.0" fill="#A63D28"/>
+<circle cx="35.0" cy="15.0" r="5.0" fill="#9AA685"/>
+<circle cx="52.0" cy="15.0" r="5.0" fill="#8A8378"/>
 <text x="461.0" y="19.5" text-anchor="middle" font-size="11.5" fill="#8A8378">Contributions · last 12 months</text>
 <text x="52" y="54" font-size="11" fill="#8A8378">Oct</text>
 <text x="116" y="54" font-size="11" fill="#8A8378">Nov</text>

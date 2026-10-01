@@ -19,19 +19,23 @@ MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monosp
 TITLE_H = 30
 
 
-def window(width, height, title, body, extra_style=""):
-    """Wrap SVG body markup in a dark terminal window with a title bar."""
+def window(width, height, title, body, extra_style="", scale=1.0):
+    """Wrap SVG body markup in a dark terminal window with a title bar.
+
+    scale enlarges the chrome for SVGs that are drawn big and shown scaled down.
+    """
+    th, r, fs = TITLE_H * scale, 5 * scale, 11.5 * scale
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
 <style>
   text {{ font-family: {MONO}; }}
   {extra_style}
 </style>
 <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10" fill="{VOID}" stroke="{BORDER}"/>
-<path d="M0.5 {TITLE_H} H{width - 0.5}" stroke="{BORDER}"/>
-<circle cx="18" cy="15" r="5" fill="{RUST}"/>
-<circle cx="35" cy="15" r="5" fill="{SAGE}"/>
-<circle cx="52" cy="15" r="5" fill="{MUTED}"/>
-<text x="{width / 2}" y="19.5" text-anchor="middle" font-size="11.5" fill="{MUTED}">{escape(title)}</text>
+<path d="M0.5 {th} H{width - 0.5}" stroke="{BORDER}"/>
+<circle cx="{18 * scale}" cy="{th / 2}" r="{r}" fill="{RUST}"/>
+<circle cx="{35 * scale}" cy="{th / 2}" r="{r}" fill="{SAGE}"/>
+<circle cx="{52 * scale}" cy="{th / 2}" r="{r}" fill="{MUTED}"/>
+<text x="{width / 2}" y="{th / 2 + fs * 0.39:.1f}" text-anchor="middle" font-size="{fs}" fill="{MUTED}">{escape(title)}</text>
 {body}
 </svg>
 """
