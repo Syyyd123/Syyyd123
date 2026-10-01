@@ -4,8 +4,8 @@
 
 <table>
   <tr>
-    <td valign="top"><img src="./ascii-portrait.svg" width="420" alt="ASCII portrait of Sid Prithvi" /></td>
-    <td valign="top"><img src="./info-card.svg" width="420" alt="Sid Prithvi, Business Analyst and Product Owner based in Sydney, Australia. Shipped the Caresa eye-care clinical system in under 1 year; co-founder of Ringa and UpBand." /></td>
+    <td valign="top"><img src="./ascii-portrait.svg?v=5600b97e" width="420" alt="ASCII portrait of Sid Prithvi" /></td>
+    <td valign="top"><img src="./info-card.svg?v=f545c7f0" width="420" alt="Sid Prithvi, Business Analyst and Product Owner based in Sydney, Australia. Shipped the Caresa eye-care clinical system in under 1 year; co-founder of Ringa and UpBand." /></td>
   </tr>
 </table>
 
@@ -21,6 +21,6 @@ Business Analyst & Product Owner · based in <b>Sydney, Australia</b>
 
 <h3>Contributions</h3>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Sid's GitHub contributions over the last 12 months" />
+<img src="./contrib-heatmap.svg?v=67de0059" width="860" alt="Sid's GitHub contributions over the last 12 months" />
 
 </div>
