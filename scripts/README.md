@@ -6,6 +6,7 @@
 | `make_ascii_svg.py` | New photo (needs `assets/portrait-source.png` + `assets/portrait-mask.png`, kept local) | `ascii-portrait.svg` |
 | `make_info_card.py` | Details change (edit `LINES`) | `info-card.svg` |
 | `fetch_contributions.py` + `render_heatmap_svg.py` | Daily, via GitHub Actions | `contrib-heatmap.svg` |
+| `trim_3d.py` | Daily, after the 3D action (colours in `profile-3d/settings.json`) | `profile-3d.svg` |
 
 Add `STATIC=1` to any `make_`/`render_` script for a frozen preview frame (`*.static.svg`, git-ignored).
 Requires Python 3 with Pillow for the portrait only; the daily job is stdlib-only.

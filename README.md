@@ -20,6 +20,10 @@ Business Analyst & Product Owner · based in <b>Sydney, Australia</b>
 
 <h3>Contributions</h3>
 
+<img src="./profile-3d.svg" width="860" alt="Sid's contributions over the last 12 months as a 3D graph" />
+
+<br><br>
+
 <img src="./contrib-heatmap.svg" width="860" alt="Sid's GitHub contributions over the last 12 months" />
 
 </div>
