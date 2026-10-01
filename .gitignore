@@ -1,0 +1,7 @@
+# Local previews
+*.static.svg
+# Source photo and mask stay local; only the ASCII art is published
+assets/portrait-source.png
+assets/portrait-mask.png
+__pycache__/
+.DS_Store

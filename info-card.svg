@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="553" height="532" viewBox="0 0 553 532" role="img" aria-label="sid@sydney: ~ $ neofetch">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; }
+  
+  .ln { opacity: 0; transform: translateX(-6px); animation: in .45s ease-out forwards; }
+  @keyframes in { to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .ln { animation: none; opacity: 1; transform: none; } }
+</style>
+<rect x="0.5" y="0.5" width="552" height="531" rx="10" fill="#1A1310" stroke="#3A2C26"/>
+<path d="M0.5 30 H552.5" stroke="#3A2C26"/>
+<circle cx="18" cy="15" r="5" fill="#A63D28"/>
+<circle cx="35" cy="15" r="5" fill="#9AA685"/>
+<circle cx="52" cy="15" r="5" fill="#8A8378"/>
+<text x="276.5" y="19.5" text-anchor="middle" font-size="11.5" fill="#8A8378">sid@sydney: ~ $ neofetch</text>
+<text class="ln" x="22" y="60" font-size="14" style="animation-delay:.2s"><tspan fill="#E0785E" font-weight="700">sid</tspan><tspan fill="#8A8378">@</tspan><tspan fill="#E0785E" font-weight="700">sydney</tspan></text>
+<path class="ln" d="M22 70 H134" stroke="#3A2C26" stroke-width="1.5" style="animation-delay:.3s"/>
+<text class="ln" x="22" y="100.5" font-size="13" style="animation-delay:0.45s"><tspan fill="#E0785E" font-weight="700">Role</tspan><tspan x="110" fill="#F5F2EC">Business Analyst · Product Owner</tspan></text>
+<text class="ln" x="22" y="129.0" font-size="13" style="animation-delay:0.57s"><tspan fill="#E0785E" font-weight="700">Base</tspan><tspan x="110" fill="#F5F2EC">Sydney, Australia · full working rights</tspan></text>
+<text class="ln" x="22" y="157.5" font-size="13" style="animation-delay:0.69s"><tspan fill="#E0785E" font-weight="700">Now</tspan><tspan x="110" fill="#F5F2EC">Cognisian · Caresa eye-care clinical system</tspan></text>
+<text class="ln" x="22" y="186.0" font-size="13" style="animation-delay:0.81s"><tspan fill="#E0785E" font-weight="700">Shipped</tspan><tspan x="110" fill="#F5F2EC">Caresa in under 1 year (legacy took 10)</tspan></text>
+<text class="ln" x="22" y="214.5" font-size="13" style="animation-delay:0.93s"><tspan fill="#E0785E" font-weight="700">Scale</tspan><tspan x="110" fill="#F5F2EC">77,000 patients on Caresa</tspan></text>
+<text class="ln" x="22" y="243.0" font-size="13" style="animation-delay:1.05s"><tspan fill="#E0785E" font-weight="700">Built</tspan><tspan x="110" fill="#F5F2EC">Caresa patient app · iOS + Android</tspan></text>
+<text class="ln" x="22" y="271.5" font-size="13" style="animation-delay:1.17s"><tspan fill="#E0785E" font-weight="700">Founder</tspan><tspan x="110" fill="#F5F2EC">Ringa · AI voice receptionist</tspan></text>
+<text class="ln" x="22" y="300.0" font-size="13" style="animation-delay:1.29s"><tspan x="110" fill="#F5F2EC">UpBand · IELTS writing app</tspan></text>
+<text class="ln" x="22" y="328.5" font-size="13" style="animation-delay:1.41s"><tspan fill="#E0785E" font-weight="700">Prev</tspan><tspan x="110" fill="#F5F2EC">Lollypop Design Studio · edvin.ai</tspan></text>
+<text class="ln" x="22" y="357.0" font-size="13" style="animation-delay:1.53s"><tspan fill="#E0785E" font-weight="700">Growth</tspan><tspan x="110" fill="#F5F2EC">edvin.ai: 0 → 100K+ users in 9 months</tspan></text>
+<text class="ln" x="22" y="385.5" font-size="13" style="animation-delay:1.65s"><tspan fill="#E0785E" font-weight="700">AI</tspan><tspan x="110" fill="#F5F2EC">Claude Code · Codex · ChatGPT · Muse Spark</tspan></text>
+<text class="ln" x="22" y="414.0" font-size="13" style="animation-delay:1.77s"><tspan fill="#E0785E" font-weight="700">Tools</tspan><tspan x="110" fill="#F5F2EC">Figma · Power BI · GitHub</tspan></text>
+<text class="ln" x="22" y="442.5" font-size="13" style="animation-delay:1.89s"><tspan fill="#E0785E" font-weight="700">Web</tspan><tspan x="110" fill="#F5F2EC">sidprithvi.com</tspan></text>
+<rect class="ln" x="22" y="479.0" width="26" height="14" rx="2" fill="#1A1310" stroke="#3A2C26" style="animation-delay:2.01s"/>
+<rect class="ln" x="52" y="479.0" width="26" height="14" rx="2" fill="#A63D28" stroke="#3A2C26" style="animation-delay:2.06s"/>
+<rect class="ln" x="82" y="479.0" width="26" height="14" rx="2" fill="#E0785E" stroke="#3A2C26" style="animation-delay:2.11s"/>
+<rect class="ln" x="112" y="479.0" width="26" height="14" rx="2" fill="#9AA685" stroke="#3A2C26" style="animation-delay:2.16s"/>
+<rect class="ln" x="142" y="479.0" width="26" height="14" rx="2" fill="#8A8378" stroke="#3A2C26" style="animation-delay:2.21s"/>
+<rect class="ln" x="172" y="479.0" width="26" height="14" rx="2" fill="#D8CFC2" stroke="#3A2C26" style="animation-delay:2.26s"/>
+<rect class="ln" x="202" y="479.0" width="26" height="14" rx="2" fill="#F5F2EC" stroke="#3A2C26" style="animation-delay:2.31s"/>
+</svg>
