@@ -67,7 +67,7 @@ def glyph_rows():
 
 
 # Rows that glitch sideways now and then, with their loop length (s)
-GLITCH_ROWS = {12: 7.3, 21: 9.1, 29: 6.7, 37: 11.3, 46: 8.2}
+GLITCH_ROWS = {12: 5.3, 21: 6.4, 29: 4.7, 37: 7.9, 46: 5.8}
 
 
 def build():
@@ -102,7 +102,7 @@ def build():
   <stop offset="0" stop-color="{PAPER}"/><stop offset=".44" stop-color="{PAPER}"/>
   <stop offset=".5" stop-color="{RUST_LIGHT}"/><stop offset=".56" stop-color="{PAPER}"/><stop offset="1" stop-color="{PAPER}"/>
   <animateTransform attributeName="gradientTransform" type="translate" values="-{width * 1.3:.0f} 0; {width * 1.3:.0f} 0; {width * 1.3:.0f} 0"
-    keyTimes="0;.4;1" dur="7s" begin="{total + 0.6:.2f}s" repeatCount="indefinite"/>
+    keyTimes="0;.55;1" dur="5s" begin="{total + 0.6:.2f}s" repeatCount="indefinite"/>
 </linearGradient></defs>'''
     style = f"""
   .fg {{ fill: url(#sheen); font-size: {FONT}px; opacity: 0; animation: print .35s ease-out forwards; }}
